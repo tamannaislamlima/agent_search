@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Inquiries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Inquiry type</th>
+      <th>User type</th>
+      <th>Proprietor trade license</th>
+      <th>Partner registered agreement</th>
+      <th>Limited maa</th>
+      <th>Limited certification incorporation</th>
+      <th>Membership of chember</th>
+      <th>Vat reg</th>
+      <th>Tin number</th>
+      <th>Exim license</th>
+      <th>Company bank account</th>
+      <th>Other license</th>
+      <th>Commercial invoice</th>
+      <th>Packing list</th>
+      <th>Pro forma invoice</th>
+      <th>Shipping documents</th>
+      <th>Proof of payment</th>
+      <th>Certificate of origin</th>
+      <th>Ex erc number</th>
+      <th>Insurance</th>
+      <th>Bond license</th>
+      <th>Restricted clearance</th>
+      <th>Import reg certificate</th>
+      <th>Export reg certificate</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inquiries.each do |inquiry| %>
+      <tr>
+        <td><%= inquiry.name %></td>
+        <td><%= inquiry.email %></td>
+        <td><%= inquiry.inquiry_type %></td>
+        <td><%= inquiry.user_type %></td>
+        <td><%= inquiry.proprietor_trade_license %></td>
+        <td><%= inquiry.partner_registered_agreement %></td>
+        <td><%= inquiry.limited_maa %></td>
+        <td><%= inquiry.limited_certification_incorporation %></td>
+        <td><%= inquiry.membership_of_chember %></td>
+        <td><%= inquiry.vat_reg %></td>
+        <td><%= inquiry.tin_number %></td>
+        <td><%= inquiry.exim_license %></td>
+        <td><%= inquiry.company_bank_account %></td>
+        <td><%= inquiry.other_license %></td>
+        <td><%= inquiry.commercial_invoice %></td>
+        <td><%= inquiry.packing_list %></td>
+        <td><%= inquiry.pro_forma_invoice %></td>
+        <td><%= inquiry.shipping_documents %></td>
+        <td><%= inquiry.proof_of_payment %></td>
+        <td><%= inquiry.certificate_of_origin %></td>
+        <td><%= inquiry.ex_erc_number %></td>
+        <td><%= inquiry.insurance %></td>
+        <td><%= inquiry.bond_license %></td>
+        <td><%= inquiry.restricted_clearance %></td>
+        <td><%= inquiry.import_reg_certificate %></td>
+        <td><%= inquiry.export_reg_certificate %></td>
+        <td><%= inquiry.location %></td>
+        <td><%= link_to 'Show', inquiry %></td>
+        <td><%= link_to 'Edit', edit_inquiry_path(inquiry) %></td>
+        <td><%= link_to 'Destroy', inquiry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inquiry', new_inquiry_path %>

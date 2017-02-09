@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  inquiry_type: MyString
+  user_type: MyString
+  proprietor_trade_license: false
+  partner_registered_agreement: false
+  limited_maa: false
+  limited_certification_incorporation: false
+  membership_of_chember: false
+  vat_reg: false
+  tin_number: false
+  exim_license: false
+  company_bank_account: false
+  other_license: false
+  commercial_invoice: false
+  packing_list: false
+  pro_forma_invoice: false
+  shipping_documents: false
+  proof_of_payment: false
+  certificate_of_origin: false
+  ex_erc_number: false
+  insurance: false
+  bond_license: false
+  restricted_clearance: false
+  import_reg_certificate: false
+  export_reg_certificate: false
+  location: MyString
+
+two:
+  name: MyString
+  email: MyString
+  inquiry_type: MyString
+  user_type: MyString
+  proprietor_trade_license: false
+  partner_registered_agreement: false
+  limited_maa: false
+  limited_certification_incorporation: false
+  membership_of_chember: false
+  vat_reg: false
+  tin_number: false
+  exim_license: false
+  company_bank_account: false
+  other_license: false
+  commercial_invoice: false
+  packing_list: false
+  pro_forma_invoice: false
+  shipping_documents: false
+  proof_of_payment: false
+  certificate_of_origin: false
+  ex_erc_number: false
+  insurance: false
+  bond_license: false
+  restricted_clearance: false
+  import_reg_certificate: false
+  export_reg_certificate: false
+  location: MyString

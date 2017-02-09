@@ -1,0 +1,152 @@
+<%= form_for(@inquiry) do |f| %>
+  <% if @inquiry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inquiry.errors.count, "error") %> prohibited this inquiry from being saved:</h2>
+
+      <ul>
+      <% @inquiry.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label_tag :name %><br>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :email %><br>
+    <%= f.text_field :email, class: 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :location %><br>
+    <%= f.select :location, options_for_select(['Dhaka', 'Chittagong', 'Benapol', 'Others']), {}, {:class=>"form-control" } %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :inquiry_type %><br />
+    <%= label_tag :inquiry_type, "Export", :value => "export"  %>
+    <%= f.radio_button :inquiry_type, 'export' %>
+    <%= label_tag :inquiry_type, "Import", :value => "import" %>
+    <%= f.radio_button :inquiry_type, 'import', :checked => true %>
+    <%= label_tag :inquiry_type, "Both", :value => "both" %>
+    <%= f.radio_button :inquiry_type, 'both' %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :user_type %><br>
+    <%= f.select :user_type, options_for_select(['Proprietor', 'Partner', 'Limited Company', 'Others']), {}, {:class=>"form-control" } %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :proprietor_trade_license %><br>
+    <%= label_tag :proprietor_trade_license, "Yes"  %>
+    <%= f.radio_button :proprietor_trade_license, true %>
+    <%= label_tag :proprietor_trade_license, "No" %>
+    <%= f.radio_button :proprietor_trade_license, false, :checked => true %>
+  </div>
+  <div class="form-group">
+    <%= label_tag :partner_registered_agreement %><br>
+      <%= label_tag :partner_registered_agreement, "Yes"  %>
+    <%= f.radio_button :partner_registered_agreement, true %>
+    <%= label_tag :partner_registered_agreement, "No" %>
+    <%= f.radio_button :partner_registered_agreement, false, :checked => true %>
+  </div>
+  <div class="form-group">
+    <%= label_tag 'If you are from a Limited Company, do you have the Memorandum & Articles Association?' %><br>
+      <%= label_tag :limited_maa, "Yes"  %>
+    <%= f.radio_button :limited_maa, true %>
+    <%= label_tag :limited_maa, "No" %>
+    <%= f.radio_button :limited_maa, false, :checked => true %>
+  </div>
+  <div class="form-group">
+    <%= label_tag 'If you are from a Limited Company, do you have the Certification of Incorporation?' %><br>
+   <%= label_tag :limited_certification_incorporation, "Yes"  %>
+    <%= f.radio_button :limited_certification_incorporation, true %>
+    <%= label_tag :limited_certification_incorporation, "No" %>
+    <%= f.radio_button :limited_certification_incorporation, false, :checked => true %>
+  </div>
+   <%= label_tag '**If you are not a Proprietor or a Partner or not from any Limited Company then contact with us. Call us 00000000000.' %>
+  <div class="form-group">
+   <%= label_tag 'Do you have these following required documents for export/import' %><br><br>
+    <%= f.check_box :membership_of_chember %>
+    <%= label_tag 'Membership Certificate from recognized Chamber/Trade Association' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :vat_reg %>
+    <%= label_tag 'VAT Registration' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :tin_number %>
+    <%= label_tag 'TIN Registration' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :exim_license %>
+    <%= label_tag 'Export or Import License' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :company_bank_account %>
+    <%= label_tag 'Bank Account in the name of the company and Bank certificate confirming account with bank' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :other_license %>
+    <%= label_tag 'Any other licenses or permits depending on type of business' %>
+  </div>
+  <div class="form-group">
+  <%= label_tag 'Do you have these following Required Documents for Shipment?' %><br><br>
+    <%= f.check_box :commercial_invoice %>
+    <%= label_tag 'Commercial Invoice (original)' %>
+  </div>
+  <div class="form-group">
+        <%= f.check_box :packing_list %>
+        <%= label_tag 'Packing List (original)' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :pro_forma_invoice %>
+    <%= label_tag 'Pro-forma Invoice (original)' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :shipping_documents %>
+    <%= label_tag 'Shipping Documents (BL/AWB/LR)' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :proof_of_payment %>
+    <%= label_tag 'Proof of Payment (TT/LC/Contract/PO against which EXP issued by CCI&E)' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :certificate_of_origin %>
+    <%= label_tag 'Certificate of Origin (if required by buyer, will be mentioned in LC)' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :ex_erc_number %>
+    <%= label_tag 'Exporters ERC No. copy' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :insurance %>
+    <%= label_tag 'Insurance (if required)' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :bond_license %>
+    <%= label_tag ' Bond License (if bonded) copy' %>
+  </div>
+  <div class="form-group">
+    <%= f.check_box :restricted_clearance %>
+    <%= label_tag 'In case of special or restricted goods, necessary clearance papers from relevant authority' %>
+  </div>
+    <div class="form-group">
+    <label>Do you have Import Registration Certificate (IRC)?</label><br>
+    <%= f.radio_button :import_reg_certificate, true %>
+    <%= label_tag :import_reg_certificate, "Yes"  %>
+    <%= f.radio_button :import_reg_certificate, false, :checked => true %>
+    <%= label_tag :import_reg_certificate, "No" %>
+  </div>
+    <div class="form-group">
+    <%= label_tag 'Do you have Export Registration Certificate (ERC)?' %><br>
+    <%= f.radio_button :export_reg_certificate, true %>
+    <%= label_tag :export_reg_certificate, "Yes"  %>
+    <%= f.radio_button :export_reg_certificate, false, :checked => true %>
+    <%= label_tag :export_reg_certificate, "No" %>
+    
+  </div>
+  <div class="form-group">
+    <%= f.submit 'Submit', class: 'btn btn-success btn-lg' %>
+  </div>
+<% end %>

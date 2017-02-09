@@ -1,0 +1,177 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body p, body h5, body h4{
+	color: #424242;
+}
+
+h3{
+	color: #00838F !important;
+}
+
+.header{
+	background-color: rgba(93,64,55,0.3);
+	height: 70px;
+	z-index: 1000;
+	position: fixed;
+	width: 100%;
+	letter-spacing: 1px;
+}
+
+.header h1{
+	color: #fff;
+	float: left;
+	margin-top: 12px;
+	margin-left: 10px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.header h1 b{
+	padding-top: 10px;
+}
+
+.header h1 span{
+	font-size: 28px;
+	text-transform: uppercase;
+	color: #616161;
+	font-weight: 1100;
+}
+
+.header nav ul li{
+	display: inline-block;
+	text-align: center;
+	float: right;
+	text-transform: uppercase;
+	margin-left: 30px;
+	margin-bottom: 20px !important;
+	color: #fff;
+	margin-top: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	/*padding: 0px 16px;*/
+}
+
+.header i{
+	display: inline-block;
+	text-align: center;
+	float: right;
+	text-transform: uppercase;
+	margin-left: 30px;
+	margin-bottom: 20px !important;
+	color: #fff;
+	margin-top: 10px;
+	margin-right: 10px;
+	cursor: pointer;
+	color: #fff;
+	padding-top: 5px;
+	border: 2px #fff solid;
+	border-radius: 50%;
+	padding: 5px;
+	/*padding: 0px 16px;*/
+}
+
+.header nav ul li:hover{
+	border-bottom: 4px solid #fff;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+.header nav ul li:hover, .header #active{
+	border-bottom: 4px solid #fff;
+	border-radius: 2px;
+}
+
+.clearfix{
+	clear: all;
+}
+
+.slide img{
+	width: 100%;
+}
+
+.text{
+	position: absolute;
+	top: 100px;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+	font-size: 
+}
+
+#about{
+	padding: 50px;
+	background-color: #F5F5F5;
+}
+
+.title-border{
+	border: 3px solid #00838F;
+	width: 40px;
+	border-radius: 2px;
+}
+
+.abt-detail{
+	padding-top: 50px;
+}
+
+.abt-detail img{
+	width: 100%;
+	height: 100px;
+}
+.detail-text{
+	text-align: center;
+	background-color: #fff;
+	padding: 10px;
+}
+
+#contact{
+	padding: 50px;
+	background-color: #F5F5F5;
+}
+
+#contact h4{
+	padding-top: 30px;
+}
+
+#contact i{
+	color: #00838F;
+	padding-top: 10px;
+	padding: 10px;
+}
+
+.contact{
+	padding-top: 40px;
+}
+
+.map-section{
+	padding-top: 70px;
+}
+
+.form{
+	padding: 50px;
+	background-color: #F5F5F5 !important;
+}
+
+form{
+	padding-top: 40px;
+}
+
+#footer{
+	background-color: rgba(93,64,55,0.3);
+	text-align: center;
+	padding: 10px;
+	color: #fff;
+}
