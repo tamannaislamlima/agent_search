@@ -4,7 +4,15 @@ class AgentsController < ApplicationController
   # GET /agents
   # GET /agents.json
   def index
-    @agents = Agent.all
+    if params[:inquiry_id].present?
+        @inquiry = Inquiry.find(params[:inquiry_id])
+    end
+    if @inquiry.present?
+        @agents = Agent.where("location = ? AND (agent_type = ? OR agent_type = ?)", @inquiry.location, @inquiry.inquiry_type, 'both')
+     else
+
+       @agents = Agent.all
+    end
   end
 
   # GET /agents/1
@@ -69,6 +77,6 @@ class AgentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def agent_params
-      params.require(:agent).permit(:name, :address, :phone, :mobile, :fax, :email, :license, :grading)
+      params.require(:agent).permit!
     end
 end

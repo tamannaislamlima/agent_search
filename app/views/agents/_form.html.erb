@@ -20,6 +20,14 @@
     <%= f.text_area :address %>
   </div>
   <div class="field">
+    <%= f.label :location %><br>
+    <%= f.select :location, options_for_select(['Dhaka', 'Chittagong', 'Benapol', 'Others']) %>
+  </div>
+  <div class="field">
+    <%= f.label :agent_type %><br>
+    <%= f.select :agent_type, options_for_select(["export", "import", "both"]) %>
+  </div>
+  <div class="field">
     <%= f.label :phone %><br>
     <%= f.text_field :phone %>
   </div>

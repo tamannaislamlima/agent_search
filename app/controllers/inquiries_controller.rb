@@ -29,7 +29,7 @@ class InquiriesController < ApplicationController
 
     respond_to do |format|
       if @inquiry.save
-        redirect_to agents_path(inquiry_id: @inquiry.id)
+        format.html {redirect_to agents_path(inquiry_id: @inquiry.id)}
       else
         format.html { render :new }
         format.json { render json: @inquiry.errors, status: :unprocessable_entity }
