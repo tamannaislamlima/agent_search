@@ -1,26 +1,27 @@
 <div class="header">
-		<div class="inner-body">
-			<div class="col-sm-12">
-				<div class="col-sm-3">
-					<h1><b>Tradeshi</b></h1>
-				</div>
-				<div class="col-sm-9">
-					<nav>
-						<ul>
-							<a href="#"><i class="fa fa-user fa-lg" aria-hidden="true"></i></a>
+	<div class="inner-body">
+		<div class="col-sm-12">
+			<div class="col-sm-3">
+				<h1><b>Tradeshi</b></h1>
+			</div>
+			<div class="col-sm-9">
+				<nav>
+					<ul>
+						<a href="#"><i class="fa fa-user fa-lg" aria-hidden="true"></i></a>
 
-							<a href="/home/index"><li class="test-class" id="home active"><b>home</b></li></a>
-							<a href="cnf.html"><li class="test-class" id="cnf"><b>cnf agents</b></li></a>
-							<a href="/inquiries/new"><li class="test-class" id="req"><b>requirements</b></li></a>
-							<% if current_user.present? %>
-<a href="<%= destroy_user_session_path %>" data-method="delete"><li class="test-class" id="home active"><b>Sign Out</b></li></a>
-							<% else %> 
-<a href="<%= user_session_path %>"><li class="test-class" id="home active"><b>Sign In</b></li></a>
-							<% end %>
-							<div class="extra"></div>
-						</ul>
-					</nav>
-				</div>
+						<% if current_user.present? %>
+						<a href="<%= destroy_user_session_path %>" data-method="delete"><li class="test-class" id="home active"><b>Sign Out</b></li></a>
+						<% else %> 
+						<a href="<%= user_session_path %>"><li class="test-class" id="home active"><b>Sign In</b></li></a>
+						<% end %>
+						<a href="cnf.html"><li class="test-class" id="cnf"><b>cnf agents</b></li></a>
+						<a href="/inquiries/new"><li class="test-class" id="req"><b>requirements</b></li></a>
+						
+						<a href="/home/index"><li class="test-class" id="home active"><b>home</b></li></a>
+						<div class="extra"></div>
+					</ul>
+				</nav>
 			</div>
 		</div>
 	</div>
+</div>

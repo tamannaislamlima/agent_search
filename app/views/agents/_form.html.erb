@@ -11,47 +11,47 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="form-group">
+    <%= f.label 'name:' %><br>
+    <%= f.text_field :name, class: 'form-control'%>
   </div>
-  <div class="field">
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
+  <div class="form-group">
+    <%= f.label 'address:' %><br>
+    <%= f.text_area :address, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :location %><br>
-    <%= f.select :location, options_for_select(['Dhaka', 'Chittagong', 'Benapol', 'Others']) %>
+  <div class="form-group">
+    <%= label_tag :location %><br>
+    <%= f.select :location, options_for_select(['Dhaka', 'Chittagong', 'Benapol', 'Others']), {}, {:class=>"form-control" } %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :agent_type %><br>
-    <%= f.select :agent_type, options_for_select(["export", "import", "both"]) %>
+    <%= f.select :agent_type, options_for_select(["export", "import", "both"]), {}, {:class=>"form-control" } %>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+  <div class="form-group">
+    <%= f.label 'phone:' %><br>
+    <%= f.text_field :phone, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :mobile %><br>
-    <%= f.text_field :mobile %>
+  <div class="form-group">
+    <%= f.label 'mobile:' %><br>
+    <%= f.text_field :mobile, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :fax %><br>
-    <%= f.text_field :fax %>
+  <div class="form-group">
+    <%= f.label 'fax:' %><br>
+    <%= f.text_field :fax, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
+  <div class="form-group">
+    <%= f.label 'email:' %><br>
+    <%= f.text_field :email, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :license %><br>
-    <%= f.text_field :license %>
+  <div class="form-group">
+    <%= f.label 'license:' %><br>
+    <%= f.text_field :license, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= f.label :grading %><br>
-    <%= f.text_field :grading %>
+  <div class="form-group">
+    <%= f.label 'grading:' %><br>
+    <%= f.text_field :grading, class: 'form-control' %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit 'Agents entry', class: 'btn btn-info btn-lg' %>
   </div>
 <% end %>

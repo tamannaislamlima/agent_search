@@ -1,36 +1,37 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Agents</h1>
+<h1 style="padding: 20px; color: #00838F;">Listing Agents</h1>
 
-<table>
+<table border="2" >
   <thead>
+  
     <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Phone</th>
-      <th>Mobile</th>
-      <th>Fax</th>
-      <th>Email</th>
-      <th>License</th>
-      <th>Grading</th>
-      <th colspan="3"></th>
-    </tr>
+      <th  style="text-align: center; padding: 20px 20px;">Name</th>
+      <th style="text-align: center; padding: 20px 20px;">Address</th>
+      <th style="text-align: center; padding: 20px 20px;">Phone</th>
+      <th style="text-align: center; padding: 20px 20px;">Mobile</th>
+      <th style="text-align: center; padding: 20px 20px;">Fax</th>
+      <th style="text-align: center; padding: 20px 20px;">Email</th>
+      <th style="text-align: center; padding: 20px 20px;">License</th>
+      <th style="text-align: center; padding: 20px 20px;">Grading</th>
+          </tr>
+    
   </thead>
 
   <tbody>
     <% @agents.each do |agent| %>
       <tr>
-        <td><%= agent.name %></td>
-        <td><%= agent.address %></td>
-        <td><%= agent.phone %></td>
-        <td><%= agent.mobile %></td>
-        <td><%= agent.fax %></td>
-        <td><%= agent.email %></td>
-        <td><%= agent.license %></td>
-        <td><%= agent.grading %></td>
-        <td><%= link_to 'Show', agent %></td>
-        <td><%= link_to 'Edit', edit_agent_path(agent) %></td>
-        <td><%= link_to 'Destroy', agent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td style="text-align: center; padding: 20px 20px;"><%= agent.name %></td>
+        <td style="text-align: center; padding: 20px 20px;"><%= agent.address %></td>
+        <td style="text-align: center; padding: 20px 20px;"><%= agent.phone %></td>
+        <td style="text-align: center; padding: 20px 20px;"><%= agent.mobile %></td>
+        <td style="text-align: center; padding: 20px 20px;"><%= agent.fax %></td>
+        <td style="text-align: center; padding: 20px 20px;"><%= agent.email %></td>
+        <td style="text-align: center; padding: 20px 20px;"><%= agent.license %></td>
+        <td style="text-align: center; padding: 20px 20px;"><%= agent.grading %></td>
+        <td style="text-align: center; padding: 20px 20px; font-weight: bold;"><%= link_to 'Show', agent %></td>
+        <td style="text-align: center; padding: 20px 20px; font-weight: bold;"><%= link_to 'Edit', edit_agent_path(agent) %></td>
+        <td style="text-align: center; padding: 20px 10px; font-weight: bold;"><%= link_to 'Destroy', agent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
